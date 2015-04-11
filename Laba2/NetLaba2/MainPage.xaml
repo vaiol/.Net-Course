@@ -1,0 +1,61 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetLaba2" x:Class="NetLaba2.MainPage" 
+             mc:Ignorable="d">
+    <Grid Margin="0,0,-0.2,0.2">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFA5A5A5" Offset="0"/>
+                <GradientStop Color="White" Offset="0.439"/>
+                <GradientStop Color="#FE5C5C5C"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="611*"/>
+            <ColumnDefinition Width="125*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="InsertButton" Content="Insert" Margin="28.2,129,20.8,295" RenderTransformOrigin="4.936,-0.147" Grid.Column="1" VerticalAlignment="Center" Click="InsertButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFFFF788" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="UpdateButton" Content="Save" Margin="28.2,206,20.8,219" Grid.Column="1" VerticalAlignment="Center" Click="UpdateButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF97FF6A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="DeleteButton" Content="Delete" Grid.Column="1" Margin="28.2,279,20.8,146" VerticalAlignment="Center" Click="DeleteButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFFF6262" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="MyDataGrid" Margin="0,56,0,-0.2" ItemsSource="{Binding}" FontSize="22" ColumnWidth="*" AlternatingRowBackground="LightBlue" BorderBrush="White" OpacityMask="White">
+            <DataGrid.DataContext>
+                <local:Entity Count="11" ID="1" Name="sdfsdf"/>
+            </DataGrid.DataContext>
+        </DataGrid>
+        <Button x:Name="BackButton" Content="StartPage" Margin="0,0,0.2,-0.2" Click="BackButton_Click" VerticalAlignment="Bottom" BorderBrush="#FFD7D7D7" Grid.Column="1"/>
+
+
+        <Label Content="DataBase" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="36" Margin="0,0,10,0" HorizontalAlignment="Center">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.189"/>
+                    <GradientStop Color="#FFAEAEAE" Offset="0.833"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+    </Grid>
+</UserControl>
